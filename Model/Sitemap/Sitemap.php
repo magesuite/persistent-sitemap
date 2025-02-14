@@ -8,7 +8,7 @@ class Sitemap extends \Magento\Sitemap\Model\Sitemap
 {
     protected function _getUrl($url, $type = \Magento\Framework\UrlInterface::URL_TYPE_LINK) //phpcs:ignore
     {
-        if (stripos($url, 'http') === 0) {
+        if (str_starts_with($url, 'http')) {
             return ltrim($url, '/');
         }
 
